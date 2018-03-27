@@ -8,9 +8,9 @@ body {
 }
 
 .saleItemGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: inline-grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
   background-color: rgb(237, 237, 237);
   text-align: center;
   min-height: 30vh;
@@ -19,8 +19,6 @@ body {
   padding-top: 1%;
   padding-left: 1%;
   margin: 0;
-  grid-column: 1 / 4;
-  grid-row: 1 / 1;
 }
 
 .saleItemGrid * {
@@ -44,7 +42,7 @@ body {
 
 
 .saleTransactionGrid {
-  grid-column: 4 / 5;
+  grid-column: 2 / 3;
   grid-row: 1 / 1;
 }
 
@@ -88,7 +86,7 @@ body {
   overflow-y: scroll;
   display:grid;
   grid-template-rows: repeat(13, auto);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 5vh 15vh 15vh 15vh;
 }
 
 .transactionGridFooter {
@@ -118,8 +116,6 @@ body {
   white-space: nowrap;
   margin: 0;
   padding: 0;
-  grid-row: 2 / 2;
-  grid-column: 1 / 4;
 }
 
 .saleCategoryGrid button {
@@ -127,7 +123,7 @@ body {
   background-color: rgb(90, 90, 90);
   color: white;
   font-size: 1.5em;
-  padding: 1.5% 0;
+  padding: .5% 0;
 }
 
 
@@ -144,7 +140,7 @@ body {
 
 .saleScreenGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 130vh 41vh;
   grid-template-rows: 87vh 8vh;
   background-color: rgb(237, 237, 237);
 }
@@ -210,7 +206,7 @@ body {
 .managerScreenGrid-graph {
   display: grid;
   grid-template-columns: 30vh 1fr 1fr 1fr;
-  grid-template-rows: 45vh 15vh 55vh;
+  grid-template-rows: 45vh 15vh 80vh;
   color: white;
 }
 
@@ -331,6 +327,7 @@ body {
 }
 
 .graphGrid {
+  display: grid;
   grid-row: 1/ 2;
   grid-column:  2/ 4;
   background-color: white;
@@ -361,6 +358,11 @@ body {
   display: grid;
   grid-row: 3/ 4;
   grid-column:  2/ 5;
+}
+
+#chart {
+  max-height: 200px !important;
+  padding-top: 3em;
 }
 
 .employeeGraphGrid {
