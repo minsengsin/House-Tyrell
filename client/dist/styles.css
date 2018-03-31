@@ -955,7 +955,154 @@ body {
   color: white;
 }
 /** ITEM MODAL**/
+/*** Delete Employee Modal ****/
+.categoryModal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 35%;
+  left: 54%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  background-color: rgb(185, 185, 185);
+  margin:0;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal-header-category{
+  position: relative;
+  display: grid;
+  grid-template-columns: 98% 10%;
+  padding: 2px 16px;
+  background-color: rgb(52, 158, 255);
+  color: white;
+}
 
+.modal-body-category {
+  display: grid;
+  padding: 20px;
+  grid-template-rows: repeat(5, 5vh);
+  grid-row-gap: 20px;
+  border-radius: 5%;
+}
+
+.modal-title {
+  grid-row: 1;
+  grid-column: 1;
+
+}
+
+.modal-close {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.modal-body-category button {
+  color: white;
+  border-radius: 2%;
+
+
+  background-color: #333;
+}
+
+.modal-footer-category {
+    padding: 2px 16px;
+    background-color: rgb(52, 158, 255);
+    color: white;
+}
+.modal-content-category {
+  background-color: white;
+  margin: auto;
+  margin: 0;
+  width: 100%;
+}
+/*******CATEGORY MODAL********/
+
+/*****Confirmation Modal ******/
+.deleteEmpModal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 35%;
+  left: 54%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  background-color: rgb(185, 185, 185);
+  margin:0;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal-header-deleteEmp{
+  position: relative;
+  display: grid;
+  grid-template-columns: 98% 10%;
+  padding: 2px 16px;
+  background-color: rgb(52, 158, 255);
+  color: white;
+}
+
+.modal-body-deleteEmp {
+  display: grid;
+  padding: 20px;
+  grid-template-rows: repeat(5, 5vh);
+  border-radius: 5%;
+}
+
+.modal-body-deleteEmp h3 {
+  grid-row: 1;
+  color: black;
+}
+
+.confirmOrCancel {
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.confirmConfirm {
+  color: white;
+  padding-top: 4%;
+  text-align: center;
+  margin-right: 13px;
+  border-radius: 3%;
+  margin-left: 13px;
+  grid-column: 1;
+  background-color: #369eff;
+}
+
+.cancelConfirm {
+  padding-top: 4%;
+  text-align: center;
+  color: white;
+  border-radius: 3%;
+  margin-right: 13px;
+  margin-left: 13px;
+  grid-column: 2;
+  background-color: #807575;
+}
+
+.modal-body-deleteEmp button {
+  color: white;
+  border-radius: 2%;
+
+
+  background-color: #333;
+}
+
+.modal-footer-deleteEmp {
+    padding: 2px 16px;
+    background-color: rgb(52, 158, 255);
+    color: white;
+}
+.modal-content-deleteEmp {
+  background-color: white;
+  margin: auto;
+  margin: 0;
+  width: 100%;
+}
+/*** Delete EMployee Modal ****/
 /*******CATEGORY MODAL*********/
 .categoryModal {
   display: none; /* Hidden by default */

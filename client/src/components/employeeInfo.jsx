@@ -4,6 +4,7 @@ import EmployeeBar from './employeeBar.jsx';
 import Navbar from './navbar.jsx';
 import Select from 'react-select';
 import axios from 'axios';
+import DeleteEmployeeModal from './deleteEmployeeModal.jsx'
 import ReactTable from 'react-table';
 
 const columns =
@@ -50,6 +51,8 @@ class EmployeeInfo extends React.Component {
     this.generateEmployeeId = this.generateEmployeeId.bind(this);
     this.submitEmployee = this.submitEmployee.bind(this);
     this.generateTimesheet = this.generateTimesheet.bind(this);
+    this.openModal = this.openModal.bind(this);
+
   }
 
   componentDidMount() {
@@ -103,6 +106,11 @@ class EmployeeInfo extends React.Component {
         throw error;
       })
   }
+  openModal(modal) {
+    document.getElementById(modal).style.display = 'block';
+  }
+
+
 
   submitEmployee() {
     axios.post('/newEmployee', {
@@ -152,6 +160,14 @@ class EmployeeInfo extends React.Component {
         <div className="navbar">
           <Navbar />
         </div>
+          <DeleteEmployeeModal
+            id="deleteEmpModal"
+            className="deleteEmpModal animated fadeIn"
+            openModal={this.props.openModal}
+            closeModal={this.props.closeModal}
+            employeeName={this.state.employeeName}
+            employeeId={this.state.employeeId}
+          />
         <div className="managerScreenGrid">
           <div className="manager-navigation"><Navigation /></div>
           <div className="employeeGraphGrid">
@@ -188,6 +204,7 @@ class EmployeeInfo extends React.Component {
               <label className="employeeIdLabel">{this.state.newEmployeeId}</label>
               <br /><br />
               <button onClick={(e) => this.submitEmployee(e)}>Submit</button>
+              <button onClick={() => this.openModal('delEmpModal')}>Delete Employee</button>
             </form>
           </div>
           <div>

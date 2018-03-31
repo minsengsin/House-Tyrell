@@ -42,6 +42,7 @@ class ManagerHome extends React.Component {
     this.getLowInventory = this.getLowInventory.bind(this);
     this.percentageDropdownOptions = this.percentageDropdownOptions.bind(this);
     this.initSocket = this.initSocket.bind(this);
+
   }
 
   componentDidMount() {
@@ -158,6 +159,8 @@ class ManagerHome extends React.Component {
       dropdownOptions,
     });
   }
+
+
 
   render() {
     const lowIngredients = [];
